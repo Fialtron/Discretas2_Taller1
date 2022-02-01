@@ -32,7 +32,20 @@ public class Menu {
         }
     }
 
-    public void gcd(){
+    public int gcd(int a, int b){
+        if ( !(a == 0 || b==0)){
+            int r = a%b;
+            int dividendo = Math.max(a,b);
+            int divisor = Math.min(a,b);
 
+            while(!(r == 0)){
+                r = dividendo%divisor;
+                dividendo = divisor;
+                divisor = r;
+            }
+            return divisor;
+        }else{
+            return Math.max(a, b);
+        }
     }
 }
