@@ -23,7 +23,7 @@ public class Menu {
                         int a = sc.nextInt();
                         System.out.println("Ingrese el segundo valor ");
                         int b = sc.nextInt();
-                        euclides(Math.abs(a),Math.abs(b));
+                        euclides(Math.abs(Math.max(a,b)),Math.abs(Math.min(a,b)));
                     }catch (Exception e){
                         System.out.println(e.getMessage());
                     }
@@ -64,6 +64,7 @@ public class Menu {
         int y = 0;
         int[] respuesta = new int[1];
 
+        System.out.println("gcd"+ gcd(a,b));
 
 
         respuesta[0]= x;
