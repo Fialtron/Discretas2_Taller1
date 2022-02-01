@@ -18,6 +18,16 @@ public class Menu {
             int opcion =  sc.nextInt();
             switch (opcion){
                 case 1:
+                    try{
+                        System.out.println("Ingrese el primer valor ");
+                        int a = sc.nextInt();
+                        System.out.println("Ingrese el segundo valor ");
+                        int b = sc.nextInt();
+                        euclides(Math.abs(a),Math.abs(b));
+                    }catch (Exception e){
+                        System.out.println(e.getMessage());
+                    }
+
                     break;
                 case 2:
                     break;
@@ -39,13 +49,25 @@ public class Menu {
             int divisor = Math.min(a,b);
 
             while(!(r == 0)){
-                r = dividendo%divisor;
                 dividendo = divisor;
                 divisor = r;
+                r = dividendo%divisor;
             }
             return divisor;
         }else{
             return Math.max(a, b);
         }
+    }
+
+    public int[] euclides(int a,int b){
+        int x= 0;
+        int y = 0;
+        int[] respuesta = new int[1];
+
+
+
+        respuesta[0]= x;
+        respuesta[1] = y;
+        return respuesta;
     }
 }
