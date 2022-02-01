@@ -45,8 +45,8 @@ public class Menu {
     public int gcd(int a, int b){
         if ( !(a == 0 || b==0)){
             int r = a%b;
-            int dividendo = Math.max(a,b);
-            int divisor = Math.min(a,b);
+            int dividendo = a;
+            int divisor = b;
 
             while(!(r == 0)){
                 dividendo = divisor;
@@ -55,7 +55,7 @@ public class Menu {
             }
             return divisor;
         }else{
-            return Math.max(a, b);
+            return b;
         }
     }
 
